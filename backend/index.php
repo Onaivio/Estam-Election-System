@@ -87,5 +87,3 @@ switch ($q) {
         # code...
         break;
 }
-
-?>

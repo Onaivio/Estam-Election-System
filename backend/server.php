@@ -843,5 +843,3 @@ function getDashboardSummary(){
 }
 
 }
-
-?>
