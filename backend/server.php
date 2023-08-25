@@ -833,10 +833,20 @@ function getDashboardSummary(){
     $votersCount = mysqli_query($this->connect(),$votersCountQuery);
     $total_voters = mysqli_fetch_assoc($votersCount);
 
+    $positionsCountQuery = "SELECT COUNT(*) as total_positions FROM positions";
+    $positionsCount = mysqli_query($this->connect(),$positionsCountQuery);
+    $total_positions = mysqli_fetch_assoc($positionsCount);
+
+    $votesCountQuery = "SELECT COUNT(*) as total_votes FROM votes";
+    $votesCount = mysqli_query($this->connect(),$votesCountQuery);
+    $total_votes = mysqli_fetch_assoc($votesCount);
+
     $response = array(
         'status' => true,
         'total_candidates' => $total_candidates['total_candidates'],
-        'total_voters' => $total_voters['total_voters']
+        'total_voters' => $total_voters['total_voters'],
+        'total_positions' => $total_positions['total_positions'],
+        'total_votes' => $total_votes['total_votes']
     );
     
     echo json_encode($response);
