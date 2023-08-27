@@ -20,8 +20,8 @@ function getAllPositions() {
                     <td>${position.id}</td>
                     <td>${position.position_name}</td>
                     <td>
-                        <button class="btn btn-sm btn-info" onclick="editPosition(${position.id})" data-bs-toggle="modal" data-bs-target="#editPositionModal">Edit</button>
-                        <button class="btn btn-sm btn-danger" onclick="delPosition(${position.id})">Delete</button>
+                        <button class="btn btn-sm btn-info" onclick="editPosition(${position.id})" data-bs-toggle="modal" data-bs-target="#editPositionModal"><i class="fa-regular fa-pen-to-square"></button>
+                        <button class="btn btn-sm btn-danger" onclick="delPosition(${position.id})"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
                 `;

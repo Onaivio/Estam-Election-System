@@ -36,11 +36,14 @@ function checkLoginExpiration() {
   }
 }
 
+
+
 // Check if the user is already logged in
 if (checkLoggedIn()) {
   // Check the login expiration if the user is logged in
   checkLoginExpiration();
-} else {
+} 
+else {
   // Prompt the user to enter the access code
   const promptAccess = prompt("Enter your access code:");
 
@@ -48,7 +51,8 @@ if (checkLoggedIn()) {
   if (promptAccess !== null && promptAccess !== "") {
     // Validate the access code
     checkAccessCode(promptAccess);
-  } else {
+  }
+   else {
     // User clicked "Cancel" or didn't enter any code
     alert("Access code prompt canceled or empty.");
     location.href = "login.html";
